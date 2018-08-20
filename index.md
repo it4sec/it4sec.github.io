@@ -16,6 +16,7 @@
  <li><a href="https://hackerone.com/dvl">Hacker0x01</a></li>
  <li><a href="https://ondailybasis.com">Blog [old stuff, removed]</a></li>
  <li><a href="https://www.virustotal.com/en/user/it4sec/">Me on VirusTotal</a></li>
+ <li><a href="https://securityintelligence.com/author/denis-laskov/">Trusteer Research Team</a></li> 
 </ul>
 
 <p>You can also reach me on denis [@] laskov.net</p>
