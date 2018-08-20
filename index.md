@@ -8,7 +8,7 @@
 <ul>
 <li><a href="https://twitter.com/it4sec">Twitter</a></li>
 <li><a href="https://il.linkedin.com/in/dlaskov">Linkedin</a></li>
-<li><a href="https://keybase.io/it4sec">Keybase</a></li
+<li><a href="https://keybase.io/it4sec">Keybase</a></li>
 <li><a href="https://mastodon.social/@it4sec">Mastodon</a></li></ul>
 <p>You can also reach me on denis [@] laskov.net</p>
 <p>&nbsp;</p>
