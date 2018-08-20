@@ -1,5 +1,4 @@
-<html>
-<body>
+<html><body>
 <title>Denis Laskov</title>
 
 <p>Denis Laskov, personal page</p>
