@@ -1,5 +1,4 @@
 <html>
-<head>testtest</head>
 <body>
 <title>Denis Laskov</title>
 
