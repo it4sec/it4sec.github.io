@@ -7,6 +7,7 @@
 <p>Social media:&nbsp;</p>
 <ul>
 <li><a href="https://twitter.com/it4sec">Twitter</a></li>
+<li><a href="https://reverseengineering.stackexchange.com/users/1334/denis-laskov">RE on StackExchange</a></li>
 <li><a href="https://il.linkedin.com/in/dlaskov">Linkedin</a></li>
 <li><a href="https://keybase.io/it4sec">Keybase</a></li>
 </ul>
