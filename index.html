@@ -146,6 +146,50 @@
       font-size: 0.95rem;
     }
 
+    .archive-wrapper {
+      margin-top: 20px;
+    }
+
+    .archive-toggle {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 16px 20px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(11, 17, 32, 0.94), rgba(7, 11, 20, 0.94));
+      color: var(--text);
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+      transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+    }
+
+    .archive-toggle:hover,
+    .archive-toggle:focus-visible {
+      transform: translateY(-2px);
+      background: var(--accent-soft);
+      border-color: rgba(34, 211, 238, 0.38);
+      outline: none;
+    }
+
+    .archive-toggle .chevron {
+      transition: transform 160ms ease;
+      color: var(--accent);
+      font-size: 1rem;
+    }
+
+    .archive-toggle[aria-expanded="true"] .chevron {
+      transform: rotate(180deg);
+    }
+
+    .archive-panel {
+      margin-top: 16px;
+    }
+
     @media (max-width: 760px) {
       .page {
         padding: 36px 0;
@@ -174,7 +218,7 @@
 
     <section class="grid" aria-label="Links">
       <div class="card">
-        <h2>Social media</h2>
+        <h2>My Social Media</h2>
 
         <ul class="links">
           <li>
@@ -243,17 +287,36 @@
       </div>
 
       <div class="card">
-        <h2>Past projects and profiles</h2>
+        <h2>Maybe later ... :)</h2>
+        <p style="margin: 0; color: var(--muted);">
+          Here will go a list of my projects and code
+        </p>
+      </div>
+    </section>
 
-        <ul class="links">
-          <li><a href="https://hackerone.com/dvl" target="_blank" rel="noopener">HackerOne profile</a></li>
-          <li><a href="https://ondailybasis.com" target="_blank" rel="noopener">Old blog archive</a></li>
-          <li><a href="https://www.virustotal.com/en/user/it4sec/" target="_blank" rel="noopener">VirusTotal profile</a></li>
-          <li><a href="https://securityintelligence.com/author/denis-laskov/" target="_blank" rel="noopener">Trusteer Research Team</a></li>
-          <li><a href="https://keybase.io/it4sec" target="_blank" rel="noopener">Keybase, not in use</a></li>
-          <li><a href="https://joinclubhouse.com/@it4sec" target="_blank" rel="noopener">Clubhouse, not in use</a></li>
-          <li><a href="https://reverseengineering.stackexchange.com/users/1334/denis-laskov?tab=profile" target="_blank" rel="noopener">Reverse Engineering StackExchange</a></li>
-        </ul>
+    <section class="archive-wrapper" aria-label="Past projects">
+      <button
+        id="archive-toggle"
+        class="archive-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="archive-panel">
+        <span>Past projects and profiles</span>
+        <span class="chevron">▼</span>
+      </button>
+
+      <div id="archive-panel" class="archive-panel" hidden>
+        <div class="card">
+          <ul class="links">
+            <li><a href="https://hackerone.com/dvl" target="_blank" rel="noopener">HackerOne profile</a></li>
+            <li><a href="https://ondailybasis.com" target="_blank" rel="noopener">Old blog archive</a></li>
+            <li><a href="https://www.virustotal.com/en/user/it4sec/" target="_blank" rel="noopener">VirusTotal profile</a></li>
+            <li><a href="https://securityintelligence.com/author/denis-laskov/" target="_blank" rel="noopener">Trusteer Research Team</a></li>
+            <li><a href="https://keybase.io/it4sec" target="_blank" rel="noopener">Keybase, not in use</a></li>
+            <li><a href="https://joinclubhouse.com/@it4sec" target="_blank" rel="noopener">Clubhouse, not in use</a></li>
+            <li><a href="https://reverseengineering.stackexchange.com/users/1334/denis-laskov?tab=profile" target="_blank" rel="noopener">Reverse Engineering StackExchange</a></li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -283,6 +346,15 @@
     const emailLink = document.getElementById("email-link");
     emailLink.href = `mailto:${email}`;
     emailLink.textContent = email;
+
+    const archiveToggle = document.getElementById("archive-toggle");
+    const archivePanel = document.getElementById("archive-panel");
+
+    archiveToggle.addEventListener("click", () => {
+      const isExpanded = archiveToggle.getAttribute("aria-expanded") === "true";
+      archiveToggle.setAttribute("aria-expanded", String(!isExpanded));
+      archivePanel.hidden = isExpanded;
+    });
   </script>
 </body>
 </html>
